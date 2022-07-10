@@ -1,8 +1,21 @@
+//phone-sized:
 body {
-    background-image: url("upwk61907234-wikimedia-image-job572-1.jpg");
+    background: linear-gradient(transparent 2%, white 10%), url("upwk61907234-wikimedia-image-job572-1.jpg");
     background-repeat: no-repeat;
     background-size: 100vw;
 }
-#css-zen-garden {
-    mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
+
+//tablet-sized:
+@media screen and (min-width:600px) {
+    body {
+        background: linear-gradient(transparent 3%, white 16%), url("upwk61907234-wikimedia-image-job572-1.jpg");
+    }
 }
+
+//pc:
+@media screen and (min-width:768px) {
+    body {
+        background: linear-gradient(transparent 4%, white 16%), url("upwk61907234-wikimedia-image-job572-1.jpg");
+    }
+}
+
