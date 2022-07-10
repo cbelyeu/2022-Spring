@@ -1,0 +1,18 @@
+body {
+  background: linear-gradient(transparent 2%, white 10%), url("upwk61907234-wikimedia-image-job572-1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background: linear-gradient(transparent 3%, white 16%), url("upwk61907234-wikimedia-image-job572-1.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    background: linear-gradient(transparent 4%, white 16%), url("upwk61907234-wikimedia-image-job572-1.jpg");
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
