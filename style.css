@@ -1,17 +1,341 @@
-body {
-  background: linear-gradient(transparent 2%, white 10%), url("upwk61907234-wikimedia-image-job572-1.jpg");
-  background-repeat: no-repeat;
-  background-size: 100vw;
+@import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+:root {
+  --plant-color: #034c37;
+  --plant-medium: #659B5E;
+  --plant-accent: #84DD63;
+  --link-color: #6791a5;
+  --light-sky-blue:rgb(0, 208, 255);
+  --dark-sky-blue: rgb(0, 76, 255);
+  --pond-accent: #D5B1A6;
+  --bioluminescence: lemonchiffon;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 10vw;
+  background-color: white;
+  opacity: 0.8;
+  padding-bottom: 150px;
+}
+.page-wrapper div li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+
+.zen-resources {
+  padding-top: 15px;
+  grid-column: 1/3;
+  text-align: center;
+}
+
+h3 + nav {
+  padding-top: 20px;
+}
+
+.requirements {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+ul {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+body {
+  background: linear-gradient(transparent, var(--light-sky-blue), rgb(0, 160, 255), rgb(0, 140, 255), var(--dark-sky-blue)), url("upwk61907234-wikimedia-image-job572-1.jpg"), var(--plant-color);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+
+#css-zen-garden {
+  margin: 0 auto;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+}
+
+h1 {
+  /* font-family: 'Edu VIC WA NT Beginner', cursive; */
+  font-family: "Indie Flower", cursive;
+  text-align: center;
+  font-size: 3em;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Indie Flower", cursive;
+  text-align: center;
+  font-size: 2em;
+  padding: 3px;
+  box-shadow: 5px 5px 12px 5px #ccc;
+}
+
+h3 + p {
+  padding-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: var(--link-color);
+}
+a:hover {
+  font-size: 1.5em;
+  animation: shrink 3s infinite;
+  text-decoration: underline;
+}
+
+.extra1 {
+  background-image: url(arena2.png);
+  background-repeat: repeat-x;
+  background-position: left;
+  height: 200px;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  z-index: 2;
+}
+
+.extra2 {
+  background-image: url(algas.png);
+  background-repeat: repeat-x;
+  background-position: left;
+  height: 200px;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  z-index: 3;
+}
+
+.extra3 {
+  background-image: url(roca.png);
+  background-repeat: no-repeat;
+  background-position: right 50px center;
+  height: 300px;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  z-index: 4;
+}
+
+.extra4 {
+  animation: mov 10s infinite;
+  position: relative;
+  background-image: url("pez.png");
+  background-repeat: no-repeat;
+  width: 10%;
+  height: 100px;
+}
+
+@keyframes mov {
+  0% {
+    left: 200px;
+    top: -200px;
+  }
+  50% {
+    left: 300px;
+    top: -900px;
+  }
+  75% {
+    left: 400px;
+    top: -1000px;
+  }
+  100% {
+    left: 200px;
+    top: -200px;
+  }
+}
+@keyframes fireflying {
+  0% {
+    left: 200px;
+    top: -200px;
+    background: radial-gradient(var(--bioluminescence), transparent);
+  }
+  50% {
+    left: 400px;
+    top: -900px;
+    background: radial-gradient(var(--bioluminescence), transparent);
+  }
+  75% {
+    left: 500px;
+    top: -1000px;
+    background: radial-gradient(var(--bioluminescence), transparent);
+  }
+  100% {
+    left: 300px;
+    top: -200px;
+    background: radial-gradient(transparent, transparent);
+  }
+}
+@keyframes flap {
+  0% {
+    transform: scale(1, 1) rotate(10deg);
+    transform-origin: bottom right;
+  }
+  50% {
+    transform: scale(1, -1) rotate(10deg);
+    transform-origin: bottom right;
+  }
+  100% {
+    transform: scale(1, 1) rotate(10deg);
+    transform-origin: bottom right;
+  }
+}
+@keyframes flight {
+  0% {
+    left: 0vw;
+    top: 5vw;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform: rotate(10deg);
+    left: 100vw;
+    top: 30vw;
+  }
+  75% {
+    transform: scale(-1, 1);
+    left: 90vw;
+    top: 40vw;
+  }
+  90% {
+    transform: scale(-1, 1);
+    left: 70vw;
+    top: 40vw;
+  }
+  100% {
+    transform: scale(1, 1);
+    left: 0vw;
+    top: 30vw;
+  }
+}
 @media screen and (min-width: 600px) {
-  body {
-    background: linear-gradient(transparent 3%, white 16%), url("upwk61907234-wikimedia-image-job572-1.jpg");
+  .page-wrapper {
+    width: 50%;
+  }
+
+  .extra5 {
+    animation: flight 13s infinite;
+    z-index: 6;
+    height: 10px;
+    width: 100px;
+    background-color: var(--plant-medium);
+    position: fixed;
+    bottom: 50vw;
+    align-self: start;
+    content: "";
+    border-radius: 50% 5px 0px 50%;
+  }
+  .extra5:before, .extra5:after {
+    position: absolute;
+    content: "";
+    animation: flap 2s infinite;
+    left: 25px;
+    bottom: 10px;
+    width: 40px;
+    height: 100px;
+    background: linear-gradient(var(--pond-accent), white);
+    opacity: 0.5;
+    border-radius: 60px 15px 10px 70px;
+  }
+  .extra5:after {
+    left: 50px;
+  }
+
+  h2,
+h3,
+h4 {
+    text-indent: -120px;
+  }
+  h2:before,
+h3:before,
+h4:before {
+    position: relative;
+    width: 0px;
+    height: 0px;
+    content: "";
+    font-size: 0px;
+    opacity: 1.5;
+    border-right: 60px solid transparent;
+    border-top: 60px solid var(--plant-medium);
+    border-left: 60px solid var(--plant-medium);
+    border-bottom: 60px solid var(--plant-medium);
+    left: -160px;
+    bottom: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+  }
+  h2:after,
+h3:after,
+h4:after {
+    animation: fireflying 20s infinite;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    content: "";
+    font-size: 0px;
+    background: radial-gradient(var(--bioluminescence), transparent);
+    right: -160px;
+    border-radius: 50%;
+  }
+
+  .design-archives h3:before, .preamble h3:before, .participation h3:before, .requirements h3:before {
+    border-top: 60px solid var(--plant-accent);
+    border-left: 60px solid var(--plant-accent);
+    border-bottom: 60px solid transparent;
+    border-right: 60px solid var(--plant-accent);
+    bottom: -150px;
+    left: -270px;
+    transform: rotate(10 deg) scale(-1, 1);
+    transform-origin: 0 100%;
+  }
+
+  h1 + h2:before,
+.preamble h3:before,
+.explanation h3:before {
+    left: -50px;
   }
 }
 @media screen and (min-width: 768px) {
-  body {
-    background: linear-gradient(transparent 4%, white 16%), url("upwk61907234-wikimedia-image-job572-1.jpg");
+  h1 + h2:before,
+.preamble h3:before,
+.explanation h3:before {
+    left: -100px;
+  }
+}
+@media screen and (min-width: 945px) {
+  h2:before, h3:before, h4:before {
+    left: -300px;
+  }
+  h2:after, h3:after, h4:after {
+    right: -300px;
+  }
+
+  h1 + h2:before,
+.preamble h3:before,
+.explanation h3:before {
+    left: -280px;
+  }
+
+  .design-archives h3:before {
+    left: -500px;
+    bottom: -100px;
   }
 }
 
